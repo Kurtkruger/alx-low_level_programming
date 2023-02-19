@@ -13,28 +13,23 @@
  * You can only use putchar five times maximum in your code
  * You are not allowed to use any variable of type char
  *
- * Return: Always 0 (success)
+ * Return: Always 0
  */
+
 int main(void)
 {
-	int i = 0;
+	int i;
 
-	while (i < 100)
+	for (i = 0 ; i < 10 ; i++)
 	{
-		if (i / 10 < i % 10)
+		if (i == 9)
+			putchar(i + '0');
+		else
 		{
-		putchar(i / 10 + '0');
-		putchar(i % 10 + '0');
-
-		if (i < 89)
-		{
-		putchar(',');
-		putchar('');
+			putchar(i + '0');
+			putchar(',');
+			putchar(' ');
 		}
 	}
-	i++;
-	}
-
-	putchar('\n');
 	return (0);
 }
